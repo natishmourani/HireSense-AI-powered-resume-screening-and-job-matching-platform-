@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,37 +18,45 @@
             color: var(--accent-cyan);
             border-bottom: 2px solid var(--border-glass) !important;
         }
+
         .metric-table td {
             vertical-align: middle;
             color: var(--text-secondary);
         }
+
         .metric-table tr:hover td {
             color: var(--text-primary);
         }
+
         .improvement-positive {
             color: #34d399 !important;
             font-weight: 600;
         }
+
         .improvement-neutral {
             color: var(--text-secondary) !important;
         }
+
         .chart-img {
             max-width: 100%;
             height: auto;
             border-radius: 12px;
             border: 1px solid var(--border-glass);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s ease;
         }
+
         .chart-img:hover {
             transform: scale(1.02);
             border-color: rgba(0, 242, 254, 0.3);
         }
+
         .analysis-card {
             border-left: 4px solid var(--accent-cyan);
         }
     </style>
 </head>
+
 <body>
 
     <!-- Transparent Glass Navbar -->
@@ -57,7 +66,8 @@
                 <i class="bi bi-cpu text-neon-cyan fs-3 me-2"></i>
                 <span class="font-heading fs-4 fw-bold">TalentSync <span class="text-neon-cyan">AI</span></span>
             </a>
-            <button class="navbar-dark navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-dark navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -66,7 +76,8 @@
                         <a class="nav-link" href="/"><i class="bi bi-grid-1x2-fill me-1"></i> Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/comparison"><i class="bi bi-bar-chart-line-fill me-1"></i> Model Comparison</a>
+                        <a class="nav-link active" href="/comparison"><i class="bi bi-bar-chart-line-fill me-1"></i>
+                            Model Comparison</a>
                     </li>
                 </ul>
             </div>
@@ -78,7 +89,8 @@
         <div class="row mb-5 text-center text-lg-start align-items-center">
             <div class="col-lg-8">
                 <h1 class="text-neon-cyan display-5 mb-2">Model Performance Evaluation</h1>
-                <p class="text-secondary lead">Honest analysis comparing Model A (all-MiniLM-L6-v2) and Model B (Fine-Tuned SentenceTransformer).</p>
+                <p class="text-secondary lead">Honest analysis comparing Model A (all-MiniLM-L6-v2) and Model B
+                    (Fine-Tuned SentenceTransformer).</p>
             </div>
         </div>
 
@@ -101,7 +113,8 @@
                                 <!-- Loading placeholder -->
                                 <tr>
                                     <td colspan="4" class="text-center py-4">
-                                        <div class="spinner-border text-neon-cyan spinner-border-sm me-2" role="status"></div>
+                                        <div class="spinner-border text-neon-cyan spinner-border-sm me-2" role="status">
+                                        </div>
                                         Loading evaluation metrics...
                                     </td>
                                 </tr>
@@ -111,19 +124,36 @@
                 </div>
 
                 <div class="glass-panel p-4 analysis-card">
-                    <h3 class="h4 mb-3 text-neon-cyan"><i class="bi bi-journal-text me-2"></i>Honest Performance Report</h3>
+                    <h3 class="h4 mb-3 text-neon-cyan"><i class="bi bi-journal-text me-2"></i>Honest Performance Report
+                    </h3>
                     <p class="text-secondary">
-                        Our evaluation dataset consists of 10 job descriptions and 50 resumes (making 500 total evaluation pairs). A threshold of <strong>0.45 similarity</strong> was utilized to determine binary classification of candidate match. Below is an honest, mathematically-grounded explanation of the differences:
+                        Our evaluation dataset consists of 10 job descriptions and 50 resumes (making 500 total
+                        evaluation pairs). A threshold of <strong>0.45 similarity</strong> was utilized to determine
+                        binary classification of candidate match. Below is an honest, mathematically-grounded
+                        explanation of the differences:
                     </p>
                     <ul class="text-secondary">
                         <li class="mb-2">
-                            <strong class="text-white">F1 Score & Precision Improvement:</strong> Precision improved dramatically from <strong>15.6%</strong> to <strong>62.3%</strong>, leading to an F1 score increase from <strong>0.268</strong> to <strong>0.741</strong>. In the base model, similarity scores for all resume-job pairs were clustered highly (mean score of 0.745), meaning the base model struggled to distinguish a true match from a random profile, causing severe false-positive counts. The fine-tuned model learned to suppress scores of mismatched pairs while elevating true positive pairs.
+                            <strong class="text-white">F1 Score & Precision Improvement:</strong> Precision improved
+                            dramatically from <strong>15.6%</strong> to <strong>62.3%</strong>, leading to an F1 score
+                            increase from <strong>0.268</strong> to <strong>0.741</strong>. In the base model,
+                            similarity scores for all resume-job pairs were clustered highly (mean score of 0.745),
+                            meaning the base model struggled to distinguish a true match from a random profile, causing
+                            severe false-positive counts. The fine-tuned model learned to suppress scores of mismatched
+                            pairs while elevating true positive pairs.
                         </li>
                         <li class="mb-2">
-                            <strong class="text-white">Recall and Top-K at 100%:</strong> Both models successfully achieved <strong>100% Recall</strong> and <strong>100% MRR</strong> on the validation set. This means that for every job, the matching engine successfully identified all relevant candidates in the dataset and always ranked them at the top of the list, without letting them slip below the decision boundary.
+                            <strong class="text-white">Recall and Top-K at 100%:</strong> Both models successfully
+                            achieved <strong>100% Recall</strong> and <strong>100% MRR</strong> on the validation set.
+                            This means that for every job, the matching engine successfully identified all relevant
+                            candidates in the dataset and always ranked them at the top of the list, without letting
+                            them slip below the decision boundary.
                         </li>
                         <li class="mb-2">
-                            <strong class="text-white">Mean Similarity Shift:</strong> The mean similarity score of positive matches increased from <strong>0.745</strong> to <strong>0.875</strong> (+13.0%), showing that fine-tuning significantly tightened the semantic embedding cluster of valid resume-to-job descriptions.
+                            <strong class="text-white">Mean Similarity Shift:</strong> The mean similarity score of
+                            positive matches increased from <strong>0.745</strong> to <strong>0.875</strong> (+13.0%),
+                            showing that fine-tuning significantly tightened the semantic embedding cluster of valid
+                            resume-to-job descriptions.
                         </li>
                     </ul>
                 </div>
@@ -132,15 +162,20 @@
             <!-- Right Side: Visualization Charts -->
             <div class="col-lg-5">
                 <div class="glass-panel p-4 mb-4 text-center">
-                    <h3 class="h4 mb-3 text-neon-cyan text-start"><i class="bi bi-bar-chart-fill me-2"></i>Performance Chart</h3>
-                    <img src="{{ url_for('static', filename='charts/model_comparison.png') }}" class="chart-img mb-2" alt="Model comparison chart">
+                    <h3 class="h4 mb-3 text-neon-cyan text-start"><i class="bi bi-bar-chart-fill me-2"></i>Performance
+                        Chart</h3>
+                    <img src="{{ url_for('static', filename='charts/model_comparison.png') }}" class="chart-img mb-2"
+                        alt="Model comparison chart">
                     <span class="text-secondary small d-block">Figure 1: Comparison of Base vs Fine-Tuned models.</span>
                 </div>
 
                 <div class="glass-panel p-4 text-center">
-                    <h3 class="h4 mb-3 text-neon-cyan text-start"><i class="bi bi-pie-chart-fill me-2"></i>Dataset Distribution</h3>
-                    <img src="{{ url_for('static', filename='charts/dataset_distribution.png') }}" class="chart-img mb-2" alt="Dataset distribution chart">
-                    <span class="text-secondary small d-block">Figure 2: Ground truth labels distribution in the training dataset.</span>
+                    <h3 class="h4 mb-3 text-neon-cyan text-start"><i class="bi bi-pie-chart-fill me-2"></i>Dataset
+                        Distribution</h3>
+                    <img src="{{ url_for('static', filename='charts/dataset_distribution.png') }}"
+                        class="chart-img mb-2" alt="Dataset distribution chart">
+                    <span class="text-secondary small d-block">Figure 2: Ground truth labels distribution in the
+                        training dataset.</span>
                 </div>
             </div>
         </div>
@@ -157,15 +192,15 @@
                 .then(data => {
                     const tbody = document.getElementById('metricsTableBody');
                     tbody.innerHTML = '';
-                    
+
                     if (data.length === 0 || data.error) {
                         tbody.innerHTML = '<tr><td colspan="4" class="text-center text-danger">Failed to load metrics.</td></tr>';
                         return;
                     }
-                    
+
                     data.forEach(item => {
                         const tr = document.createElement('tr');
-                        
+
                         const isPercent = item.metric !== 'F1 Score' && item.metric !== 'Ranking Accuracy (MRR)';
                         const formatValue = (val) => {
                             if (isPercent && val <= 1.0) {
@@ -175,15 +210,15 @@
                             }
                             return val.toFixed(1) + '%';
                         };
-                        
+
                         const baseVal = formatValue(item.base);
                         const tunedVal = formatValue(item.tuned);
-                        
+
                         // Calculate display delta
                         const diff = item.improvement;
                         let diffText = "";
                         let diffClass = "improvement-neutral";
-                        
+
                         if (diff > 0) {
                             diffText = "+" + (isPercent ? (diff * 100).toFixed(1) + '%' : diff.toFixed(3));
                             diffClass = "improvement-positive";
@@ -193,7 +228,7 @@
                         } else {
                             diffText = "0.0";
                         }
-                        
+
                         tr.innerHTML = `
                             <td><strong class="text-white">${item.metric}</strong></td>
                             <td class="text-center">${baseVal}</td>
@@ -210,4 +245,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -6,7 +6,7 @@
     --border-glass: rgba(255, 255, 255, 0.08);
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
-    
+
     /* Harmonious Cyber Accents */
     --accent-cyan: #00f2fe;
     --accent-blue: #3b82f6;
@@ -16,7 +16,7 @@
     --gradient-purple: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
     --gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
     --gradient-danger: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-    
+
     --shadow-neon: 0 0 15px rgba(0, 242, 254, 0.35);
     --shadow-purple: 0 0 15px rgba(139, 92, 246, 0.35);
 }
@@ -26,14 +26,19 @@ body {
     color: var(--text-primary);
     font-family: 'Plus Jakarta Sans', sans-serif;
     min-height: 100vh;
-    background-image: 
+    background-image:
         radial-gradient(circle at 10% 20%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
         radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 40%);
     background-attachment: fixed;
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, .font-heading {
+h1,
+h2,
+h3,
+h4,
+h5,
+.font-heading {
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
 }
@@ -290,9 +295,11 @@ ul.feedback-list.improve li::before {
         transform: rotate(0deg);
         box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
     }
+
     50% {
         box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
     }
+
     100% {
         transform: rotate(360deg);
         box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
@@ -337,9 +344,15 @@ ul.feedback-list.improve li::before {
         background: white !important;
         color: black !important;
     }
-    .glass-nav, .upload-zone, .switch-container, .btn-cyber-primary, .btn-cyber-secondary {
+
+    .glass-nav,
+    .upload-zone,
+    .switch-container,
+    .btn-cyber-primary,
+    .btn-cyber-secondary {
         display: none !important;
     }
+
     .glass-panel {
         background: transparent !important;
         border: 1px solid #ddd !important;
@@ -347,15 +360,19 @@ ul.feedback-list.improve li::before {
         box-shadow: none !important;
         page-break-inside: avoid;
     }
+
     .score-circle {
         box-shadow: none !important;
     }
+
     .score-circle::before {
         background: white !important;
     }
+
     .score-circle span {
         color: black !important;
     }
+
     .skill-badge {
         color: black !important;
         border: 1px solid #999 !important;
