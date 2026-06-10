@@ -1,0 +1,1277 @@
+[
+  {
+    "id": "JOB_01",
+    "title": "Backend Developer - Category B",
+    "role": "Backend Developer",
+    "required_skills": [
+      "Docker",
+      "Redis",
+      "Python",
+      "Node",
+      "Java"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "Backend Developer",
+      "description": "3+ years of experience working as a Backend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Designed database schema for an ERP system on PostgreSQL (Postgres), reducing query times."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Computer Science",
+      "description": "Master of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_02",
+    "title": "Product Manager - Category C",
+    "role": "Product Manager",
+    "required_skills": [
+      "Product Roadmap",
+      "A/B Testing",
+      "Strategy",
+      "Market Analysis",
+      "Jira"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "Product Manager",
+      "description": "3+ years of experience working as a Product Manager or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Conducted target market analysis and defined functional user stories for beta launch."
+    },
+    "education_requirements": {
+      "degree": "Doctor of Philosophy",
+      "field": "Computer Science",
+      "description": "Doctor of Philosophy in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_03",
+    "title": "QA Engineer - Category C",
+    "role": "QA Engineer",
+    "required_skills": [
+      "JS",
+      "Selenium",
+      "SQL",
+      "Postman",
+      "CI/CD"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "QA Engineer",
+      "description": "2+ years of experience working as a QA Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Integrated test automation scripts into GitLab CI/CD pipeline for pull request validations."
+    },
+    "education_requirements": {
+      "degree": "Doctor of Philosophy",
+      "field": "Computer Science",
+      "description": "Doctor of Philosophy in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_04",
+    "title": "DevOps Engineer - Category C",
+    "role": "DevOps Engineer",
+    "required_skills": [
+      "CI/CD",
+      "Bash",
+      "Docker",
+      "AWS",
+      "Prometheus"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "DevOps Engineer",
+      "description": "5+ years of experience working as a DevOps Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Orchestrated auto-scaling Kubernetes clusters with Prometheus monitoring dashboard."
+    },
+    "education_requirements": {
+      "degree": "Doctor of Philosophy",
+      "field": "Computer Science",
+      "description": "Doctor of Philosophy in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_05",
+    "title": "DevOps Engineer - Category C",
+    "role": "DevOps Engineer",
+    "required_skills": [
+      "Python",
+      "CI/CD",
+      "AWS",
+      "Ansible",
+      "Linux"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "DevOps Engineer",
+      "description": "5+ years of experience working as a DevOps Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Orchestrated auto-scaling Kubernetes clusters with Prometheus monitoring dashboard."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Information Technology",
+      "description": "Bachelor of Science in Information Technology or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_06",
+    "title": "Frontend Developer - Category A",
+    "role": "Frontend Developer",
+    "required_skills": [
+      "Webpack",
+      "HTML5",
+      "Bootstrap",
+      "React",
+      "TS"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "Frontend Developer",
+      "description": "2+ years of experience working as a Frontend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Re-architected client-facing web application with modern JavaScript (JS) reducing page loads."
+    },
+    "education_requirements": {
+      "degree": "Doctor of Philosophy",
+      "field": "Computer Science",
+      "description": "Doctor of Philosophy in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_07",
+    "title": "Software Engineer - Category C",
+    "role": "Software Engineer",
+    "required_skills": [
+      "SQL",
+      "PostgreSQL",
+      "Algorithms",
+      "C Sharp",
+      "Git"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "Software Engineer",
+      "description": "5+ years of experience working as a Software Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Built a responsive web platform utilizing JavaScript (JS) and React on the frontend."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "description": "Bachelor of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_08",
+    "title": "Data Scientist - Category C",
+    "role": "Data Scientist",
+    "required_skills": [
+      "Sklearn",
+      "Deep Learning",
+      "Pandas",
+      "Tableau",
+      "Python"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "Data Scientist",
+      "description": "3+ years of experience working as a Data Scientist or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Built a customer churn predictive model using Machine Learning (ML) and XGBoost on tabular data."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "description": "Bachelor of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_09",
+    "title": "Frontend Developer - Category B",
+    "role": "Frontend Developer",
+    "required_skills": [
+      "Bootstrap",
+      "JavaScript",
+      "React",
+      "Webpack",
+      "Vue"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "Frontend Developer",
+      "description": "5+ years of experience working as a Frontend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Developed a responsive components library styled with Bootstrap and integrated with Vue."
+    },
+    "education_requirements": {
+      "degree": "Doctor of Philosophy",
+      "field": "Computer Science",
+      "description": "Doctor of Philosophy in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_10",
+    "title": "Frontend Developer - Category B",
+    "role": "Frontend Developer",
+    "required_skills": [
+      "HTML5",
+      "Vue",
+      "Bootstrap",
+      "TS",
+      "React"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "Frontend Developer",
+      "description": "2+ years of experience working as a Frontend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Developed a responsive components library styled with Bootstrap and integrated with Vue."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Information Technology",
+      "description": "Bachelor of Science in Information Technology or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_11",
+    "title": "Backend Developer - Category B",
+    "role": "Backend Developer",
+    "required_skills": [
+      "Node.js",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "REST APIs"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "Backend Developer",
+      "description": "3+ years of experience working as a Backend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Implemented enterprise authentication APIs using ASP.NET Core in C Sharp (.NET)."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Data Science",
+      "description": "Master of Science in Data Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_12",
+    "title": "DevOps Engineer - Category B",
+    "role": "DevOps Engineer",
+    "required_skills": [
+      "Docker",
+      "CI/CD",
+      "AWS",
+      "Prometheus",
+      "Linux"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "DevOps Engineer",
+      "description": "2+ years of experience working as a DevOps Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Automated system configuration and package management using Ansible playbooks."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "description": "Bachelor of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_13",
+    "title": "Software Engineer - Category C",
+    "role": "Software Engineer",
+    "required_skills": [
+      "Data Structures",
+      "Algorithms",
+      ".NET",
+      "JS",
+      "Postgres"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "Software Engineer",
+      "description": "3+ years of experience working as a Software Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Developed a distributed key-value store using C# and .NET with high throughput."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Information Technology",
+      "description": "Bachelor of Science in Information Technology or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_14",
+    "title": "Backend Developer - Category B",
+    "role": "Backend Developer",
+    "required_skills": [
+      "GraphQL",
+      "Redis",
+      "Docker",
+      "Go",
+      "Kubernetes"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "Backend Developer",
+      "description": "2+ years of experience working as a Backend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Developed high-performance microservices in Go and Python communicating via REST and gRPC."
+    },
+    "education_requirements": {
+      "degree": "Doctor of Philosophy",
+      "field": "Computer Science",
+      "description": "Doctor of Philosophy in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_15",
+    "title": "Product Manager - Category B",
+    "role": "Product Manager",
+    "required_skills": [
+      "Scrum",
+      "SQL",
+      "Agile",
+      "Product Roadmap",
+      "User Stories"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "Product Manager",
+      "description": "5+ years of experience working as a Product Manager or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Designed and executed user retention A/B testing campaigns, parsing telemetry with SQL."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Computer Science",
+      "description": "Master of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_16",
+    "title": "Product Manager - Category C",
+    "role": "Product Manager",
+    "required_skills": [
+      "Strategy",
+      "Agile",
+      "A/B Testing",
+      "Product Roadmap",
+      "Scrum"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "Product Manager",
+      "description": "3+ years of experience working as a Product Manager or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Designed and executed user retention A/B testing campaigns, parsing telemetry with SQL."
+    },
+    "education_requirements": {
+      "degree": "Doctor of Philosophy",
+      "field": "Computer Science",
+      "description": "Doctor of Philosophy in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_17",
+    "title": "Software Engineer - Category B",
+    "role": "Software Engineer",
+    "required_skills": [
+      "AWS",
+      "MySQL",
+      "Java",
+      "Git",
+      "REST APIs"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "Software Engineer",
+      "description": "5+ years of experience working as a Software Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Built a responsive web platform utilizing JavaScript (JS) and React on the frontend."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "description": "Bachelor of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_18",
+    "title": "Data Scientist - Category B",
+    "role": "Data Scientist",
+    "required_skills": [
+      "Pandas",
+      "Scikit-Learn",
+      "R",
+      "SQL",
+      "NumPy"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "Data Scientist",
+      "description": "2+ years of experience working as a Data Scientist or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Analyzed user search behavior datasets stored in PostgreSQL (Postgres) to extract key patterns."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Computer Science",
+      "description": "Master of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_19",
+    "title": "Frontend Developer - Category B",
+    "role": "Frontend Developer",
+    "required_skills": [
+      "Vue",
+      "Bootstrap",
+      "TS",
+      "Sass",
+      "Webpack"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "Frontend Developer",
+      "description": "5+ years of experience working as a Frontend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Developed a responsive components library styled with Bootstrap and integrated with Vue."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Engineering",
+      "field": "Electrical Engineering",
+      "description": "Bachelor of Engineering in Electrical Engineering or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_20",
+    "title": "Backend Developer - Category A",
+    "role": "Backend Developer",
+    "required_skills": [
+      "Java",
+      "Kubernetes",
+      ".NET",
+      "Docker",
+      "AWS"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "Backend Developer",
+      "description": "3+ years of experience working as a Backend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Developed high-performance microservices in Go and Python communicating via REST and gRPC."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Engineering",
+      "field": "Electrical Engineering",
+      "description": "Bachelor of Engineering in Electrical Engineering or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_21",
+    "title": "DevOps Engineer - Category B",
+    "role": "DevOps Engineer",
+    "required_skills": [
+      "Kubernetes",
+      "Python",
+      "Bash",
+      "Prometheus",
+      "Docker"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "DevOps Engineer",
+      "description": "3+ years of experience working as a DevOps Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Established secure CI/CD build pipelines using GitHub Actions and Docker."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Information Technology",
+      "description": "Bachelor of Science in Information Technology or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_22",
+    "title": "Machine Learning Engineer - Category A",
+    "role": "Machine Learning Engineer",
+    "required_skills": [
+      "Sklearn",
+      "Python",
+      "Deep Learning",
+      "Docker",
+      "Computer Vision"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "Machine Learning Engineer",
+      "description": "2+ years of experience working as a Machine Learning Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Designed large-scale similarity search index using Sentence Transformers on AWS."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "description": "Bachelor of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_23",
+    "title": "DevOps Engineer - Category C",
+    "role": "DevOps Engineer",
+    "required_skills": [
+      "Kubernetes",
+      "Docker",
+      "Bash",
+      "CI/CD",
+      "Ansible"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "DevOps Engineer",
+      "description": "5+ years of experience working as a DevOps Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Orchestrated auto-scaling Kubernetes clusters with Prometheus monitoring dashboard."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Computer Science",
+      "description": "Master of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_24",
+    "title": "QA Engineer - Category B",
+    "role": "QA Engineer",
+    "required_skills": [
+      "Postman",
+      "CI/CD",
+      "Playwright",
+      "Manual Testing",
+      "Python"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "QA Engineer",
+      "description": "3+ years of experience working as a QA Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Automated web application testing using Selenium WebDriver and Python pytest."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Engineering",
+      "field": "Electrical Engineering",
+      "description": "Bachelor of Engineering in Electrical Engineering or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_25",
+    "title": "Machine Learning Engineer - Category C",
+    "role": "Machine Learning Engineer",
+    "required_skills": [
+      "AWS",
+      "Machine Learning",
+      "Deep Learning",
+      "Python",
+      "TensorFlow"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "Machine Learning Engineer",
+      "description": "5+ years of experience working as a Machine Learning Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Deployed a computer vision pipeline with TensorFlow and OpenCV for object detection."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Data Science",
+      "description": "Master of Science in Data Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_26",
+    "title": "Software Engineer - Category C",
+    "role": "Software Engineer",
+    "required_skills": [
+      "Python3",
+      "Data Structures",
+      "Git",
+      ".NET",
+      "JS"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "Software Engineer",
+      "description": "2+ years of experience working as a Software Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Designed and query-optimized an enterprise-scale relational database using PostgreSQL (Postgres)."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Data Science",
+      "description": "Master of Science in Data Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_27",
+    "title": "Software Engineer - Category C",
+    "role": "Software Engineer",
+    "required_skills": [
+      "AWS",
+      "JavaScript",
+      "MySQL",
+      "Docker",
+      "C Sharp"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "Software Engineer",
+      "description": "2+ years of experience working as a Software Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Developed a distributed key-value store using C# and .NET with high throughput."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "description": "Bachelor of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_28",
+    "title": "Backend Developer - Category A",
+    "role": "Backend Developer",
+    "required_skills": [
+      "PostgreSQL",
+      "Java",
+      "GraphQL",
+      ".NET",
+      "Node.js"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "Backend Developer",
+      "description": "2+ years of experience working as a Backend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Built a real-time messaging gateway utilizing Node.js, WebSockets, and Redis cache."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Computer Science",
+      "description": "Master of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_29",
+    "title": "Software Engineer - Category C",
+    "role": "Software Engineer",
+    "required_skills": [
+      "Postgres",
+      "Docker",
+      "Python3",
+      "MySQL",
+      "C#"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "Software Engineer",
+      "description": "2+ years of experience working as a Software Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Built a responsive web platform utilizing JavaScript (JS) and React on the frontend."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Computer Science",
+      "description": "Master of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_30",
+    "title": "Data Scientist - Category B",
+    "role": "Data Scientist",
+    "required_skills": [
+      "Sklearn",
+      "PostgreSQL",
+      "Data Analysis",
+      "NumPy",
+      "R"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "Data Scientist",
+      "description": "2+ years of experience working as a Data Scientist or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Analyzed user search behavior datasets stored in PostgreSQL (Postgres) to extract key patterns."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "description": "Bachelor of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_31",
+    "title": "Data Scientist - Category B",
+    "role": "Data Scientist",
+    "required_skills": [
+      "Python",
+      "Deep Learning",
+      "Postgres",
+      "R",
+      "Machine Learning"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "Data Scientist",
+      "description": "5+ years of experience working as a Data Scientist or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Performed statistical analysis on huge marketing datasets with Pandas, NumPy, and Tableau."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Computer Science",
+      "description": "Master of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_32",
+    "title": "Backend Developer - Category A",
+    "role": "Backend Developer",
+    "required_skills": [
+      "C Sharp",
+      "Go",
+      "Kubernetes",
+      "Redis",
+      "REST APIs"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "Backend Developer",
+      "description": "5+ years of experience working as a Backend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Designed database schema for an ERP system on PostgreSQL (Postgres), reducing query times."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "description": "Bachelor of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_33",
+    "title": "QA Engineer - Category A",
+    "role": "QA Engineer",
+    "required_skills": [
+      "SQL",
+      "CI/CD",
+      "API Testing",
+      "Manual Testing",
+      "JavaScript"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "QA Engineer",
+      "description": "5+ years of experience working as a QA Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Automated web application testing using Selenium WebDriver and Python pytest."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Information Technology",
+      "description": "Bachelor of Science in Information Technology or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_34",
+    "title": "Product Manager - Category A",
+    "role": "Product Manager",
+    "required_skills": [
+      "Agile",
+      "Scrum",
+      "A/B Testing",
+      "SQL",
+      "User Stories"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "Product Manager",
+      "description": "5+ years of experience working as a Product Manager or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Conducted target market analysis and defined functional user stories for beta launch."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Information Technology",
+      "description": "Bachelor of Science in Information Technology or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_35",
+    "title": "DevOps Engineer - Category C",
+    "role": "DevOps Engineer",
+    "required_skills": [
+      "Linux",
+      "Terraform",
+      "CI/CD",
+      "Prometheus",
+      "Docker"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "DevOps Engineer",
+      "description": "5+ years of experience working as a DevOps Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Orchestrated auto-scaling Kubernetes clusters with Prometheus monitoring dashboard."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Data Science",
+      "description": "Master of Science in Data Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_36",
+    "title": "QA Engineer - Category A",
+    "role": "QA Engineer",
+    "required_skills": [
+      "API Testing",
+      "Playwright",
+      "CI/CD",
+      "Manual Testing",
+      "Selenium"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "QA Engineer",
+      "description": "5+ years of experience working as a QA Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Executed manual and automated API validation tests with Postman and custom scripts."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Data Science",
+      "description": "Master of Science in Data Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_37",
+    "title": "Software Engineer - Category C",
+    "role": "Software Engineer",
+    "required_skills": [
+      "Python",
+      "AWS",
+      "SQL",
+      "Java",
+      "Data Structures"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "Software Engineer",
+      "description": "2+ years of experience working as a Software Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Developed a distributed key-value store using C# and .NET with high throughput."
+    },
+    "education_requirements": {
+      "degree": "Doctor of Philosophy",
+      "field": "Computer Science",
+      "description": "Doctor of Philosophy in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_38",
+    "title": "Machine Learning Engineer - Category B",
+    "role": "Machine Learning Engineer",
+    "required_skills": [
+      "PyTorch",
+      "AWS",
+      "Scikit-Learn",
+      "NLP",
+      "Python"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "Machine Learning Engineer",
+      "description": "5+ years of experience working as a Machine Learning Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Designed large-scale similarity search index using Sentence Transformers on AWS."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "description": "Bachelor of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_39",
+    "title": "QA Engineer - Category C",
+    "role": "QA Engineer",
+    "required_skills": [
+      "Python",
+      "JavaScript",
+      "Manual Testing",
+      "API Testing",
+      "SQL"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "QA Engineer",
+      "description": "3+ years of experience working as a QA Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Constructed end-to-end regression testing suites using Playwright and JavaScript (JS)."
+    },
+    "education_requirements": {
+      "degree": "Doctor of Philosophy",
+      "field": "Computer Science",
+      "description": "Doctor of Philosophy in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_40",
+    "title": "Machine Learning Engineer - Category A",
+    "role": "Machine Learning Engineer",
+    "required_skills": [
+      "PyTorch",
+      "Python",
+      "Docker",
+      "TensorFlow",
+      "NLP"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "Machine Learning Engineer",
+      "description": "3+ years of experience working as a Machine Learning Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Designed large-scale similarity search index using Sentence Transformers on AWS."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Information Technology",
+      "description": "Bachelor of Science in Information Technology or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_41",
+    "title": "QA Engineer - Category B",
+    "role": "QA Engineer",
+    "required_skills": [
+      "Postman",
+      "Manual Testing",
+      "SQL",
+      "Selenium",
+      "Playwright"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "QA Engineer",
+      "description": "2+ years of experience working as a QA Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Integrated test automation scripts into GitLab CI/CD pipeline for pull request validations."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Computer Science",
+      "description": "Master of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_42",
+    "title": "Frontend Developer - Category C",
+    "role": "Frontend Developer",
+    "required_skills": [
+      "Tailwind",
+      "JavaScript",
+      "CSS3",
+      "Vue",
+      "Webpack"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "Frontend Developer",
+      "description": "3+ years of experience working as a Frontend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Designed a modular e-commerce dashboard using React, Tailwind CSS, and TypeScript."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Engineering",
+      "field": "Electrical Engineering",
+      "description": "Bachelor of Engineering in Electrical Engineering or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_43",
+    "title": "Frontend Developer - Category B",
+    "role": "Frontend Developer",
+    "required_skills": [
+      "JS",
+      "Webpack",
+      "TypeScript",
+      "Bootstrap",
+      "Tailwind"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "Frontend Developer",
+      "description": "2+ years of experience working as a Frontend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Built a collaborative drag-and-drop workspace using HTML5, CSS3, and Sass."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "description": "Bachelor of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_44",
+    "title": "Data Scientist - Category A",
+    "role": "Data Scientist",
+    "required_skills": [
+      "R",
+      "Tableau",
+      "Data Analysis",
+      "Scikit-Learn",
+      "Statistics"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "Data Scientist",
+      "description": "3+ years of experience working as a Data Scientist or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Developed a recommendation system based on natural language reviews and Pandas."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Engineering",
+      "field": "Electrical Engineering",
+      "description": "Bachelor of Engineering in Electrical Engineering or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_45",
+    "title": "Backend Developer - Category A",
+    "role": "Backend Developer",
+    "required_skills": [
+      "Python",
+      "Docker",
+      ".NET",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "Backend Developer",
+      "description": "3+ years of experience working as a Backend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Implemented enterprise authentication APIs using ASP.NET Core in C Sharp (.NET)."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Data Science",
+      "description": "Master of Science in Data Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_46",
+    "title": "Product Manager - Category A",
+    "role": "Product Manager",
+    "required_skills": [
+      "Jira",
+      "Product Roadmap",
+      "Strategy",
+      "Market Analysis",
+      "A/B Testing"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "Product Manager",
+      "description": "5+ years of experience working as a Product Manager or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Designed and executed user retention A/B testing campaigns, parsing telemetry with SQL."
+    },
+    "education_requirements": {
+      "degree": "Doctor of Philosophy",
+      "field": "Computer Science",
+      "description": "Doctor of Philosophy in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_47",
+    "title": "Frontend Developer - Category A",
+    "role": "Frontend Developer",
+    "required_skills": [
+      "React",
+      "JS",
+      "Tailwind",
+      "Sass",
+      "Webpack"
+    ],
+    "experience_requirements": {
+      "years": 5,
+      "role_match": "Frontend Developer",
+      "description": "5+ years of experience working as a Frontend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Developed a responsive components library styled with Bootstrap and integrated with Vue."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Computer Science",
+      "description": "Master of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_48",
+    "title": "Backend Developer - Category C",
+    "role": "Backend Developer",
+    "required_skills": [
+      ".NET",
+      "Python",
+      "GraphQL",
+      "Java",
+      "PostgreSQL"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "Backend Developer",
+      "description": "2+ years of experience working as a Backend Developer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Implemented enterprise authentication APIs using ASP.NET Core in C Sharp (.NET)."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Information Technology",
+      "description": "Bachelor of Science in Information Technology or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_49",
+    "title": "DevOps Engineer - Category B",
+    "role": "DevOps Engineer",
+    "required_skills": [
+      "Ansible",
+      "Linux",
+      "Docker",
+      "AWS",
+      "Jenkins"
+    ],
+    "experience_requirements": {
+      "years": 2,
+      "role_match": "DevOps Engineer",
+      "description": "2+ years of experience working as a DevOps Engineer or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Orchestrated auto-scaling Kubernetes clusters with Prometheus monitoring dashboard."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "description": "Bachelor of Science in Computer Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_50",
+    "title": "Data Scientist - Category A",
+    "role": "Data Scientist",
+    "required_skills": [
+      "Data Analysis",
+      "Sklearn",
+      "Statistics",
+      "Pandas",
+      "PostgreSQL"
+    ],
+    "experience_requirements": {
+      "years": 3,
+      "role_match": "Data Scientist",
+      "description": "3+ years of experience working as a Data Scientist or similar position."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Built a customer churn predictive model using Machine Learning (ML) and XGBoost on tabular data."
+    },
+    "education_requirements": {
+      "degree": "Master of Science",
+      "field": "Data Science",
+      "description": "Master of Science in Data Science or equivalent technical experience."
+    }
+  },
+  {
+    "id": "JOB_51",
+    "title": "Junior AI/ML Developer - Category A",
+    "role": "Junior AI/ML Developer",
+    "required_skills": [
+      "Python",
+      "Scikit-learn",
+      "Pandas",
+      "SQL Server",
+      "C#"
+    ],
+    "experience_requirements": {
+      "years": 0,
+      "role_match": "Junior AI/ML Developer",
+      "description": "Fresh graduate or undergraduate with hands-on project experience in machine learning, data preprocessing, and software development."
+    },
+    "project_requirements": {
+      "description": "Looking for candidates who have experience in projects such as: Built a classification or regression model using Scikit-learn and Pandas with feature engineering and model evaluation."
+    },
+    "education_requirements": {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "description": "Bachelor of Science in Computer Science or equivalent technical experience."
+    }
+  }
+]

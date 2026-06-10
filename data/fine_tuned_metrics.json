@@ -1,0 +1,8 @@
+{
+  "Precision": 0.6232492997198881,
+  "Recall": 1.0,
+  "F1 Score": 0.7414102564102564,
+  "Top-K Accuracy": 1.0,
+  "Mean Similarity Score": 0.874830969234011,
+  "Ranking Accuracy (MRR)": 1.0
+}

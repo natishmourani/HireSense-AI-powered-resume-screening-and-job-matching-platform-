@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-dark: #070913;
+    --bg-card: rgba(18, 22, 44, 0.7);
+    --border-glass: rgba(255, 255, 255, 0.08);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    
+    /* Harmonious Cyber Accents */
+    --accent-cyan: #00f2fe;
+    --accent-blue: #3b82f6;
+    --accent-purple: #8b5cf6;
+    --accent-pink: #ec4899;
+    --gradient-primary: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    --gradient-purple: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
+    --gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    --gradient-danger: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    
+    --shadow-neon: 0 0 15px rgba(0, 242, 254, 0.35);
+    --shadow-purple: 0 0 15px rgba(139, 92, 246, 0.35);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 40%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, .font-heading {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+    border-color: rgba(0, 242, 254, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45), 0 0 10px rgba(0, 242, 254, 0.05);
+}
+
+.glass-nav {
+    background: rgba(7, 9, 19, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-glass);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Glowing text & borders */
+.text-neon-cyan {
+    color: var(--accent-cyan);
+    text-shadow: 0 0 8px rgba(0, 242, 254, 0.5);
+}
+
+.text-neon-purple {
+    color: var(--accent-purple);
+    text-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
+}
+
+.bg-neon-cyan {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-neon);
+}
+
+.bg-neon-purple {
+    background: var(--gradient-purple);
+    box-shadow: var(--shadow-purple);
+}
+
+/* Custom Buttons */
+.btn-cyber-primary {
+    background: var(--gradient-primary);
+    border: none;
+    color: #070913;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 10px 24px;
+    transition: all 0.2s ease;
+}
+
+.btn-cyber-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+    color: #070913;
+}
+
+.btn-cyber-secondary {
+    background: transparent;
+    border: 1px solid var(--accent-purple);
+    color: var(--text-primary);
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 24px;
+    transition: all 0.2s ease;
+}
+
+.btn-cyber-secondary:hover {
+    background: rgba(139, 92, 246, 0.15);
+    box-shadow: var(--shadow-purple);
+    transform: translateY(-2px);
+    color: var(--text-primary);
+}
+
+/* File Upload Widget */
+.upload-zone {
+    border: 2px dashed rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.3s ease;
+}
+
+.upload-zone:hover {
+    border-color: var(--accent-cyan);
+    background: rgba(0, 242, 254, 0.02);
+}
+
+.upload-zone.dragover {
+    border-color: var(--accent-purple);
+    background: rgba(139, 92, 246, 0.05);
+}
+
+/* Radial Score Ring */
+.score-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(var(--accent-cyan) var(--score-deg), rgba(255, 255, 255, 0.08) 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: var(--shadow-neon);
+}
+
+.score-circle::before {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #0d1127;
+}
+
+.score-circle span {
+    position: relative;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+/* Category Progress Bars */
+.progress-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.progress-bar-cyan {
+    background: var(--gradient-primary);
+    box-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+}
+
+.progress-bar-purple {
+    background: var(--gradient-purple);
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.4);
+}
+
+/* Custom Badges */
+.skill-badge {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--text-secondary);
+    border-radius: 20px;
+    padding: 6px 14px;
+    display: inline-block;
+    margin: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.skill-badge.matched {
+    background: rgba(16, 185, 129, 0.08);
+    border-color: #10b981;
+    color: #34d399;
+}
+
+.skill-badge.missing {
+    background: rgba(239, 68, 68, 0.08);
+    border-color: #ef4444;
+    color: #f87171;
+}
+
+/* Custom Tabs & Accordions */
+.nav-pills .nav-link {
+    color: var(--text-secondary);
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 8px 18px;
+    transition: all 0.2s ease;
+}
+
+.nav-pills .nav-link.active {
+    background: rgba(0, 242, 254, 0.12);
+    color: var(--accent-cyan);
+    border: 1px solid rgba(0, 242, 254, 0.3);
+}
+
+/* Feedback List Bullet styling */
+ul.feedback-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.feedback-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+ul.feedback-list.have li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #10b981;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+ul.feedback-list.missing li::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #ef4444;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+ul.feedback-list.improve li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-cyan);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Spinner Glow animation */
+.loader-glow {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.05);
+    border-top-color: var(--accent-cyan);
+    animation: spin-glow 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin-glow {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+    }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+    }
+}
+
+/* Model Toggle Switch styling */
+.switch-container {
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 4px;
+    border-radius: 30px;
+}
+
+.switch-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.switch-btn.active {
+    background: var(--gradient-primary);
+    color: #070913;
+    box-shadow: var(--shadow-neon);
+}
+
+.switch-btn.active.purple {
+    background: var(--gradient-purple);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-purple);
+}
+
+/* Print layout tweaks for Download Report */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    .glass-nav, .upload-zone, .switch-container, .btn-cyber-primary, .btn-cyber-secondary {
+        display: none !important;
+    }
+    .glass-panel {
+        background: transparent !important;
+        border: 1px solid #ddd !important;
+        color: black !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+    }
+    .score-circle {
+        box-shadow: none !important;
+    }
+    .score-circle::before {
+        background: white !important;
+    }
+    .score-circle span {
+        color: black !important;
+    }
+    .skill-badge {
+        color: black !important;
+        border: 1px solid #999 !important;
+        background: transparent !important;
+    }
+}

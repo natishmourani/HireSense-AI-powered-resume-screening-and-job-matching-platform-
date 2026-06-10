@@ -1,0 +1,38 @@
+[
+  {
+    "metric": "Precision",
+    "base": 0.15632219388177948,
+    "tuned": 0.6232492997198881,
+    "improvement": 0.4669271058381086
+  },
+  {
+    "metric": "Recall",
+    "base": 1.0,
+    "tuned": 1.0,
+    "improvement": 0.0
+  },
+  {
+    "metric": "F1 Score",
+    "base": 0.26849737981316923,
+    "tuned": 0.7414102564102564,
+    "improvement": 0.47291287659708714
+  },
+  {
+    "metric": "Top-K Accuracy",
+    "base": 1.0,
+    "tuned": 1.0,
+    "improvement": 0.0
+  },
+  {
+    "metric": "Mean Similarity Score",
+    "base": 0.7453082862185009,
+    "tuned": 0.874830969234011,
+    "improvement": 0.12952268301551018
+  },
+  {
+    "metric": "Ranking Accuracy (MRR)",
+    "base": 1.0,
+    "tuned": 1.0,
+    "improvement": 0.0
+  }
+]
