@@ -1,3 +1,4 @@
+from werkzeug.datastructures import mixins
 import os
 import re
 from groq import Groq
@@ -53,16 +54,23 @@ def get_mock_explanation(resume_sections, job_description):
         resume_skills_raw = skills_raw.split(',')
     else:
         resume_skills_raw = re.split(r'[\n\r]+', skills_raw)
+    
     # Strip any "Label: " prefix (e.g. "Databases: PostgreSQL" → "PostgreSQL")
     cleaned = []
     for s in resume_skills_raw:
-        s = s.strip()
-        if ':' in s:
-            s = s.split(':', 1)[1].strip()
-        if s:
-            cleaned.append(s.lower())
+        # Split on newlines first to separate any merged tokens
+        sub_tokens = re.split(r'[\n\r]+', s.strip())
+        for token in sub_tokens:
+            token = token.strip()
+            # Strip label prefix like "Languages: " but only if it looks like a label
+            if ':' in token:
+                parts = token.split(':', 1)
+                # Only strip if left side is a short label (1-3 words), not a skill itself
+                if len(parts[0].strip().split()) <= 3:
+                    token = parts[1].strip()
+            if token:
+                cleaned.append(token.lower())
     resume_skills = cleaned
-
         
     job_required_skills = job_description.get('required_skills', [])
     job_required_skills_lower = [s.lower() for s in job_required_skills]
@@ -102,11 +110,14 @@ def get_mock_explanation(resume_sections, job_description):
     missing = []
     if missing_skills:
         missing.append(f"Required technical skills not mentioned: {', '.join(missing_skills)}.")
-    else:
-        missing.append("No critical skill gaps detected — your resume covers all required technical skills for this role.")
+    # else:
+    #     missing.append("No critical skill gaps detected — your resume covers all required technical skills for this role.")
 
     if not is_exp_valid:
         missing.append("A validated experience entry containing a job title, company name, and date range.")
+
+    if not missing:
+        missing.append("No significant gaps identified. The candidate's profile aligns well with the required skills and experience for this role.")
 
     # Compile "How To Improve"
     improve = []
@@ -143,7 +154,8 @@ def get_groq_explanation(resume_sections, job_description):
         res_edu = resume_sections.get('EDUCATION', 'Not provided')
         
         job_role = job_description.get('role', 'Not provided')
-        job_title = job_description.get('title', 'Not provided')
+        raw_title = job_description.get('title', 'Not provided')
+        job_title = re.sub(r'\s*-\s*Category\s+[A-C]$', '', raw_title).strip()
         job_skills = ', '.join(job_description.get('required_skills', []))
         job_exp = job_description.get('experience_requirements', {}).get('description', 'Not provided')
         job_proj = job_description.get('project_requirements', {}).get('description', 'Not provided')
@@ -178,14 +190,22 @@ You must generate structured feedback strictly under the three headings below. D
 For each heading, output bullet points (starting with *).
 Do not exaggerate any achievements or hallucinate candidate experience. Use only facts present in the resume.
 
+STRICT RULES:
+- Only list a skill as missing if it appears in Required Skills and is completely absent from the resume.
+- Do not speculate about whether experience is "sufficient" or "considered sufficient" — if the resume states the experience, accept it.
+- Do not suggest adding things that are already present in the resume.
+- Do not invent concerns about edge cases or hypothetical disqualifiers.
+- If all required skills are present, say so clearly and do not fabricate gaps.
+- Category labels like "Category A", "Category B", "Category C" in the job title are internal labels — ignore them completely.
+
 What You Have:
 * List candidate's matching skills, matching projects, or verified education details.
 
 What You Are Missing:
-* List required skills, project experiences, or qualifications that are present in the job description but missing from the resume.
+* Only list required skills or qualifications that are genuinely absent from the resume. If nothing is missing, say so.
 
 How To Improve:
-* Provide actionable advice to align the resume (e.g. acquire specific skills, format dates/company names, highlight relevant project accomplishments).
+* Provide only actionable, specific advice based on real gaps. If the resume is a strong match, acknowledge it and suggest minor polish only. Do not suggest adding information that is already present anywhere in the resume text.
 """
         completion = client.chat.completions.create(
             model="llama-3.3-70b-versatile",

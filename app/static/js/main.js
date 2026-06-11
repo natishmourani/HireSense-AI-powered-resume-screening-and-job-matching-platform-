@@ -198,13 +198,10 @@ document.addEventListener('DOMContentLoaded', () => {
             btnUseBaseModel.classList.remove('active');
             btnUseTunedModel.classList.add('active');
             btnUseTunedModel.classList.add('purple');
-            // Change theme style of the score ring and progress bars dynamically
-            overallScoreRing.style.boxShadow = 'var(--shadow-purple)';
         } else {
             btnUseBaseModel.classList.add('active');
             btnUseTunedModel.classList.remove('active');
             btnUseTunedModel.classList.remove('purple');
-            overallScoreRing.style.boxShadow = 'var(--shadow-neon)';
         }
         
         renderMatchResults();
@@ -223,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Determine theme colors depending on the active model
         const primaryColor = useTunedModelActive ? 'var(--accent-purple)' : 'var(--accent-cyan)';
         
-        overallScoreRing.style.background = `conic-gradient(${primaryColor} ${scoreDeg}deg, rgba(255, 255, 255, 0.08) 0deg)`;
+        overallScoreRing.style.background = `conic-gradient(${primaryColor} ${scoreDeg}deg, var(--border-light) 0deg)`;
         
         // Animate counter
         animateCounter(overallScoreValue, parseFloat(overallScoreValue.textContent) || 0, score, 800);

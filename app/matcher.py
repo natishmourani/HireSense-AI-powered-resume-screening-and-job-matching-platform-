@@ -202,7 +202,7 @@ def calculate_match_scores(parsed_resume, job, use_tuned_model=True):
     
     if not is_exp_valid or not resume_exp:
         experience_score = 0.0
-        experience_display = "N/A – Experience section not found"
+        experience_display = "N/A - Experience section not found"
     else:
         # Calculate semantic embedding similarity between validated experiences and job requirements
         embs = model.encode([resume_exp, job_exp_req_desc])

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Model Comparison - TalentSync AI</title>
+    <title>Model Comparison - HireSense</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -15,8 +15,8 @@
         .metric-table th {
             font-family: 'Outfit', sans-serif;
             font-weight: 600;
-            color: var(--accent-cyan);
-            border-bottom: 2px solid var(--border-glass) !important;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--border) !important;
         }
 
         .metric-table td {
@@ -29,7 +29,7 @@
         }
 
         .improvement-positive {
-            color: #34d399 !important;
+            color: #2d6a4f !important;
             font-weight: 600;
         }
 
@@ -40,19 +40,13 @@
         .chart-img {
             max-width: 100%;
             height: auto;
-            border-radius: 12px;
-            border: 1px solid var(--border-glass);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease;
-        }
-
-        .chart-img:hover {
-            transform: scale(1.02);
-            border-color: rgba(0, 242, 254, 0.3);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
         }
 
         .analysis-card {
-            border-left: 4px solid var(--accent-cyan);
+            border-left: 3px solid var(--accent-blue);
         }
     </style>
 </head>
@@ -60,13 +54,10 @@
 <body>
 
     <!-- Transparent Glass Navbar -->
-    <nav class="navbar navbar-expand-lg glass-nav navbar-dark">
+    <nav class="navbar navbar-expand-lg glass-nav navbar-light">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="/">
-                <i class="bi bi-cpu text-neon-cyan fs-3 me-2"></i>
-                <span class="font-heading fs-4 fw-bold">TalentSync <span class="text-neon-cyan">AI</span></span>
-            </a>
-            <button class="navbar-dark navbar-toggler" type="button" data-bs-toggle="collapse"
+            <a class="navbar-brand font-heading fs-4 fw-bold" href="/">HireSense</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -88,7 +79,7 @@
         <!-- Header -->
         <div class="row mb-5 text-center text-lg-start align-items-center">
             <div class="col-lg-8">
-                <h1 class="text-neon-cyan display-5 mb-2">Model Performance Evaluation</h1>
+                <h1 class="display-5 mb-2">Model Performance Evaluation</h1>
                 <p class="text-secondary lead">Honest analysis comparing Model A (all-MiniLM-L6-v2) and Model B
                     (Fine-Tuned SentenceTransformer).</p>
             </div>
@@ -100,7 +91,7 @@
                 <div class="glass-panel p-4 mb-4">
                     <h3 class="h4 mb-4 text-neon-cyan"><i class="bi bi-table me-2"></i>Evaluation Metrics</h3>
                     <div class="table-responsive">
-                        <table class="table table-dark table-striped bg-transparent metric-table align-middle">
+                        <table class="table table-striped table-light-clean metric-table align-middle">
                             <thead>
                                 <tr>
                                     <th>Metric</th>
@@ -134,7 +125,7 @@
                     </p>
                     <ul class="text-secondary">
                         <li class="mb-2">
-                            <strong class="text-white">F1 Score & Precision Improvement:</strong> Precision improved
+                            <strong>F1 Score & Precision Improvement:</strong> Precision improved
                             dramatically from <strong>15.6%</strong> to <strong>62.3%</strong>, leading to an F1 score
                             increase from <strong>0.268</strong> to <strong>0.741</strong>. In the base model,
                             similarity scores for all resume-job pairs were clustered highly (mean score of 0.745),
@@ -143,14 +134,14 @@
                             pairs while elevating true positive pairs.
                         </li>
                         <li class="mb-2">
-                            <strong class="text-white">Recall and Top-K at 100%:</strong> Both models successfully
+                            <strong>Recall and Top-K at 100%:</strong> Both models successfully
                             achieved <strong>100% Recall</strong> and <strong>100% MRR</strong> on the validation set.
                             This means that for every job, the matching engine successfully identified all relevant
                             candidates in the dataset and always ranked them at the top of the list, without letting
                             them slip below the decision boundary.
                         </li>
                         <li class="mb-2">
-                            <strong class="text-white">Mean Similarity Shift:</strong> The mean similarity score of
+                            <strong>Mean Similarity Shift:</strong> The mean similarity score of
                             positive matches increased from <strong>0.745</strong> to <strong>0.875</strong> (+13.0%),
                             showing that fine-tuning significantly tightened the semantic embedding cluster of valid
                             resume-to-job descriptions.
@@ -230,7 +221,7 @@
                         }
 
                         tr.innerHTML = `
-                            <td><strong class="text-white">${item.metric}</strong></td>
+                            <td><strong>${item.metric}</strong></td>
                             <td class="text-center">${baseVal}</td>
                             <td class="text-center">${tunedVal}</td>
                             <td class="text-center ${diffClass}">${diffText}</td>
