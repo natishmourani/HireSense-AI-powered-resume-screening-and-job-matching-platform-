@@ -7,8 +7,9 @@ from app.matcher import calculate_match_scores
 from app.groq_client import get_groq_explanation
 from dotenv import load_dotenv
 
-# Load environment variables (.env file)
-load_dotenv()
+# Load environment variables from project root .env
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 app.config['UPLOAD_FOLDER'] = os.path.abspath(os.path.join(os.path.dirname(__file__), '../data/uploads'))
