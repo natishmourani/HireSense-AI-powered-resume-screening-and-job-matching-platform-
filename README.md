@@ -1,235 +1,300 @@
-# HireSense — AI-Powered Resume & Job Matching Platform
+<div align="center">
 
-> Evaluate resume alignment, analyze skill gaps, and explore deep-learning matching models — honestly.
+```
+██╗  ██╗██╗██████╗ ███████╗███████╗███╗   ██╗███████╗███████╗
+██║  ██║██║██╔══██╗██╔════╝██╔════╝████╗  ██║██╔════╝██╔════╝
+███████║██║██████╔╝█████╗  ███████╗██╔██╗ ██║███████╗█████╗  
+██╔══██║██║██╔══██╗██╔══╝  ╚════██║██║╚██╗██║╚════██║██╔══╝  
+██║  ██║██║██║  ██║███████╗███████║██║ ╚████║███████║███████╗
+╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝
+```
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
-![Flask](https://img.shields.io/badge/Flask-2.x-black?style=flat-square&logo=flask)
-![Sentence Transformers](https://img.shields.io/badge/SentenceTransformers-2.x-orange?style=flat-square)
-![Groq](https://img.shields.io/badge/Groq-Llama3-green?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)
+### *Does your resume actually fit the job — or just look like it does?*
 
----
+<br/>
 
-## What is HireSense?
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Flask](https://img.shields.io/badge/Flask-Backend-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Sentence Transformers](https://img.shields.io/badge/Sentence_Transformers-Embeddings-FF6B35?style=for-the-badge&logo=huggingface&logoColor=white)](https://sbert.net/)
+[![Groq](https://img.shields.io/badge/Groq-Llama_3.3_70b-F55036?style=for-the-badge&logo=groq&logoColor=white)](https://groq.com/)
+[![License](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](LICENSE)
 
-HireSense answers one question: **"How well does this resume fit this job?"**
+<br/>
 
-It parses a PDF resume into structured sections, scores it against a job description using two AI embedding models, and generates explainable feedback — either via Groq's Llama 3 or a local rule-based fallback.
+> **HireSense** parses your resume, scores it against a job description using two AI embedding models,  
+> and tells you *exactly* what's missing — with AI-generated feedback you can act on.
 
----
-
-## Features
-
-- **PDF Resume Parser** — extracts Skills, Experience, Projects, and Education sections with section isolation
-- **Dual Model Scoring** — compares Base Model (all-MiniLM-L6-v2) vs Fine-Tuned Model side by side
-- **ATS Skill Coverage** — exact match + synonym taxonomy (JS = JavaScript, Sklearn = Scikit-Learn, etc.)
-- **Weighted Scoring** — Skills 40% · Experience 25% · Projects 20% · Education 15%
-- **AI Feedback** — Groq Llama 3.3 generates "What You Have / Missing / How to Improve"
-- **Rule-Based Fallback** — works fully offline without a Groq API key
-- **Model Comparison Page** — F1, Precision, Recall, MRR metrics with charts
-- **Download Report** — browser print-to-PDF of the full match assessment
+</div>
 
 ---
 
-## Project Structure
+## 🧠 How the scoring actually works
+
+Most resume tools give you a vague percentage and call it a day. HireSense breaks it down section by section, so you know *where* you're losing points.
+
+```
+Your Resume                          Job Description
+    │                                      │
+    ▼                                      ▼
+┌─────────────┐                   ┌─────────────────┐
+│   Parser    │  ←── pdfplumber   │  Requirements   │
+│─────────────│                   │─────────────────│
+│ ✦ Skills    │──── 40% weight ──▶│ Required Skills │
+│ ✦ Experience│──── 25% weight ──▶│ Role Context    │
+│ ✦ Projects  │──── 20% weight ──▶│ Tech Relevance  │
+│ ✦ Education │──── 15% weight ──▶│ Degree / Field  │
+└─────────────┘                   └─────────────────┘
+        │                                  │
+        └──────────────┬───────────────────┘
+                       ▼
+           ┌───────────────────────┐
+           │   Embedding Engine    │
+           │  all-MiniLM-L6-v2    │
+           │  (Base vs Fine-Tuned) │
+           └───────────────────────┘
+                       │
+                       ▼
+           ┌───────────────────────┐
+           │    Match Score  🎯    │
+           │  + ATS Skill Gap      │
+           │  + AI Feedback        │
+           │  (Groq Llama 3.3)    │
+           └───────────────────────┘
+```
+
+---
+
+## ⚔️ Two Models Enter. You Decide Which Wins.
+
+HireSense runs **both** models on your resume simultaneously and lets you compare results side by side — not just scores, but full evaluation metrics.
+
+<div align="center">
+
+|  | 🅰️ Base Model | 🅱️ Fine-Tuned Model |
+|---|---|---|
+| **Architecture** | `all-MiniLM-L6-v2` | `all-MiniLM-L6-v2` |
+| **Training** | Pre-trained (HuggingFace) | Fine-tuned on 754 resume-job pairs |
+| **Loss Function** | — | MultipleNegativesRankingLoss |
+| **Precision** | ~15.6% | ~62.3% |
+| **F1 Score** | 0.268 | **0.741** |
+| **Verdict** | Baseline | 🏆 4× better |
+
+</div>
+
+> The fine-tuned model isn't just better in theory — it's been specifically trained to understand what makes a resume *actually relevant* to a job posting, not just semantically similar.
+
+---
+
+## ✨ Features
+
+| 🔍 Feature | 💬 What it does |
+|---|---|
+| **PDF Resume Parser** | Extracts Skills, Experience, Projects, Education with strict section isolation — no content bleed |
+| **ATS Skill Coverage** | Exact match + synonym taxonomy: `JS = JavaScript`, `Sklearn = Scikit-Learn`, and 50+ more |
+| **Weighted Scoring** | Skills 40% · Experience 25% · Projects 20% · Education 15% |
+| **Dual Model Comparison** | Base Model A vs Fine-Tuned Model B — scores, metrics, and charts |
+| **AI Gap Analysis** | Groq Llama 3.3-70b generates: *What You Have · What's Missing · How to Improve* |
+| **Offline Fallback** | Full rule-based feedback — works with zero API key |
+| **Download Report** | Browser print-to-PDF of your full match assessment |
+
+---
+
+## 🗂️ Project Structure
 
 ```
 HireSense/
 │
-├── app/                         # Flask application
-│   ├── __init__.py              # App factory, routes, API endpoints
-│   ├── parser.py                # PDF text extraction & section parser
-│   ├── matcher.py               # Scoring engine (embeddings + rules)
-│   ├── groq_client.py           # Groq LLM feedback + rule-based fallback
-│   ├── static/                  # CSS, JS, charts, metrics JSON
-│   └── templates/               # index.html, comparison.html
+├── 🧠 app/
+│   ├── __init__.py           ← Flask app factory, routes, API endpoints
+│   ├── parser.py             ← PDF text extraction + section parser
+│   ├── matcher.py            ← Scoring engine (embeddings + weighted rules)
+│   ├── groq_client.py        ← Groq Llama 3.3 feedback + rule-based fallback
+│   ├── static/               ← CSS, JS, charts, metrics JSON
+│   └── templates/            ← index.html, comparison.html
 │
-├── data/
-│   ├── jobs.json                # 51 job descriptions (8 roles, 3 categories)
-│   ├── train_dataset.json       # 6000 synthetic resume-job pairs
-│   ├── eval_dataset.json        # Evaluation pairs
-│   └── uploads/                 # Temporary PDF uploads (auto-cleaned)
+├── 📦 data/
+│   ├── jobs.json             ← 51 job descriptions (8 roles, 3 seniority levels)
+│   ├── train_dataset.json    ← 6,000 synthetic resume-job pairs
+│   ├── eval_dataset.json     ← Evaluation set
+│   └── uploads/              ← Temp PDF storage (auto-cleaned)
 │
-├── models/
-│   └── fine_tuned_model/        # Fine-tuned SentenceTransformer
+├── 🤖 models/
+│   └── fine_tuned_model/     ← Fine-tuned SentenceTransformer weights
 │       ├── model.safetensors
 │       ├── config.json
-│       ├── tokenizer.json
-│       └── ...
+│       └── tokenizer.json
 │
-├── notebooks/                   # ML pipeline (offline training)
-│   ├── data_preprocessing.ipynb       # Synthetic resume + job generation
-│   ├── embedding_generation.ipynb     # Embedding pre-computation
-│   ├── fine_tuning.ipynb              # Model fine-tuning pipeline
-│   ├── resume_parser.ipynb            # Parser development & testing
-│   ├── base_model_evaluation.ipynb    # Base model metrics
+├── 📓 notebooks/             ← Full ML training pipeline (offline)
+│   ├── data_preprocessing.ipynb
+│   ├── fine_tuning.ipynb
+│   ├── base_model_evaluation.ipynb
 │   ├── fine_tuned_model_evaluation.ipynb
-│   └── model_comparison.ipynb         # Side-by-side evaluation
+│   └── model_comparison.ipynb
 │
-├── .env                         # Environment variables (not committed)
-├── .gitignore
-├── requirements.txt
-└── run.py                       # App entry point
+├── ⚙️ .env                   ← API keys (not committed)
+├── 📋 requirements.txt
+└── 🚀 run.py                 ← Entry point
 ```
 
 ---
 
-## How It Works
+## 🚀 Getting Started
 
-### 1. Resume Parsing (`parser.py`)
-- Extracts raw text from PDF using `pdfplumber`
-- Detects section headers via regex (Skills, Experience, Projects, Education)
-- Enforces **Critical Section Isolation** — prevents content bleed between sections
-- Validates Experience entries: must contain job role + company name + date range
-- Rejects scanned/image-only PDFs with a user-friendly error
+### Prerequisites
 
-### 2. Match Scoring (`matcher.py`)
-
-| Category | Weight | Method |
-|---|---|---|
-| Skills | 40% | 60% keyword coverage + 40% embedding similarity |
-| Experience | 25% | Cosine similarity between experience text and job description |
-| Projects | 20% | 70% semantic similarity + 30% keyword overlap |
-| Education | 15% | 50% embedding similarity + 50% rule-based degree/field matching |
-
-### 3. Two Models
-
-| | Base Model A | Fine-Tuned Model B |
-|---|---|---|
-| Architecture | all-MiniLM-L6-v2 | all-MiniLM-L6-v2 (fine-tuned) |
-| Training | Pre-trained (HuggingFace) | Fine-tuned on 754 resume-job pairs |
-| Loss Function | — | MultipleNegativesRankingLoss |
-| Precision | ~15.6% | ~62.3% |
-| F1 Score | 0.268 | 0.741 |
-
-### 4. AI Feedback (`groq_client.py`)
-- Sends parsed resume sections + job requirements to **Groq Llama 3.3-70b**
-- Returns structured bullets under: What You Have · What You Are Missing · How To Improve
-- Falls back to local rule-based explanation if API key is missing or call fails
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![pip](https://img.shields.io/badge/pip-required-3775A9?style=flat-square&logo=pypi&logoColor=white)](https://pip.pypa.io)
 
 ---
 
-## Setup & Installation
-
-### Prerequisites
-- Python 3.10+
-- pip
-
-### 1. Clone the repository
+**1 — Clone**
 ```bash
-git clone https://github.com/yourusername/hiresense.git
+git clone https://github.com/natishmourani/hiresense.git
 cd hiresense
 ```
 
-### 2. Install dependencies
+**2 — Install**
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Configure environment variables
-Create a `.env` file in the project root:
-```env
-GROQ_API_KEY=your_groq_api_key_here
+**3 — Configure** *(optional — app works without this)*
+```bash
+# Create .env in the project root
+echo "GROQ_API_KEY=your_groq_api_key_here" > .env
 ```
-> The app works without a Groq API key — it falls back to rule-based feedback automatically.
+> 💡 No Groq key? The app automatically falls back to rule-based feedback — full functionality, offline.
 
-### 4. Run the app
+**4 — Run**
 ```bash
 python run.py
 ```
-
-Visit `http://localhost:5000` in your browser.
-
----
-
-## Usage
-
-1. **Select a Job** — choose from 51 available job descriptions across 8 roles
-2. **Upload Resume** — drag & drop or browse for a text-based PDF
-3. **Analyze Match** — click "Analyze Match" to run the full pipeline
-4. **View Results** — toggle between Base Model A and Fine-Tuned Model B
-5. **Explore Tabs** — ATS Skill Gap · AI Feedback · Parsed Sections
-6. **Compare Models** — visit the Model Comparison page for evaluation metrics
-
----
-
-## Training Pipeline (Offline)
-
-The fine-tuned model was trained offline using Jupyter notebooks — not at runtime.
-
 ```
-data_preprocessing.ipynb     →  Generate 200 synthetic resumes + 50 jobs
-                             →  Create 6000 labeled pairs (match / no-match)
-                             ↓
-fine_tuning.ipynb            →  Fine-tune all-MiniLM-L6-v2
-                             →  MultipleNegativesRankingLoss, 2 epochs
-                             →  Save to models/fine_tuned_model/
-                             ↓
-model_comparison.ipynb       →  Evaluate F1, Precision, Recall, MRR
-                             →  Export metrics to static/metrics_comparison.json
+ * Running on http://localhost:5000
 ```
 
-> **Note:** Training data is synthetic — generated from structured skill pools and role templates. This is a deliberate design choice: publicly available resume datasets do not include labeled resume-job match pairs required for contrastive fine-tuning.
+---
+
+## 🎮 Usage Flow
+
+```
+1. Select a Job      →  51 descriptions across 8 roles & 3 seniority levels
+        │
+        ▼
+2. Upload Resume     →  Drag & drop a text-based PDF
+        │
+        ▼
+3. Analyze Match     →  Full pipeline runs in seconds
+        │
+        ▼
+4. View Results      →  Toggle between Model A (Base) and Model B (Fine-Tuned)
+        │
+        ├──▶  📊  ATS Skill Gap          (exact + synonym matches)
+        ├──▶  🤖  AI Feedback            (what to add, what to remove)
+        ├──▶  📄  Parsed Sections        (see what the parser extracted)
+        └──▶  📈  Model Comparison Page  (F1, Precision, Recall, MRR)
+```
 
 ---
 
-## Known Limitations
+## 🏋️ Training Pipeline
 
-| Limitation | Impact |
+The fine-tuned model was trained **offline** — not at runtime. Here's the full pipeline:
+
+```
+data_preprocessing.ipynb
+  → Generate 200 synthetic resumes + 50 job descriptions
+  → Create 6,000 labeled pairs (match / no-match)
+          │
+          ▼
+fine_tuning.ipynb
+  → Fine-tune all-MiniLM-L6-v2
+  → Loss: MultipleNegativesRankingLoss
+  → Epochs: 2  |  Training pairs: 754
+  → Save to models/fine_tuned_model/
+          │
+          ▼
+model_comparison.ipynb
+  → Evaluate F1, Precision, Recall, MRR
+  → Export → static/metrics_comparison.json
+```
+
+> **Why synthetic data?** Publicly available resume datasets don't include the labeled resume-job *match pairs* needed for contrastive fine-tuning. Synthetic generation from structured skill pools and role templates was a deliberate design choice — not a shortcut.
+
+---
+
+## 💼 Supported Job Roles
+
+<div align="center">
+
+`Machine Learning Engineer` · `Data Scientist` · `Backend Developer` · `Frontend Developer`  
+`Software Engineer` · `DevOps Engineer` · `QA Engineer` · `Product Manager`
+
+**51 job descriptions · 8 roles · 3 seniority levels (A / B / C)**
+
+</div>
+
+---
+
+## ⚠️ Known Limitations
+
+*Being honest about what it can't do is part of what makes it trustworthy.*
+
+| ⚡ Limitation | 📉 Impact |
 |---|---|
-| Parser requires standard section headers | Non-standard headers (e.g. "Work History", "Featured Work") score 0% for those sections |
-| Synonym taxonomy is manually curated | Uncommon skill aliases may not be recognized |
-| Semantic similarity ≠ qualification | A verbose resume matches better than a concise one with identical skills |
-| Synthetic training data | Model performance on real-world resume diversity may vary |
-| Experience scoring uses text similarity | Does not extract or verify actual years of experience numerically |
+| Requires standard section headers | Non-standard headers like "Work History" or "Featured Work" score 0% for that section |
+| Synonym taxonomy is manually curated | Uncommon skill aliases may be missed |
+| Semantic similarity ≠ qualification | A verbose resume can outscore a concise one with identical skills |
+| Synthetic training data | Real-world resume diversity may expose edge cases |
+| Experience scoring uses text similarity | Does not numerically extract or verify years of experience |
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
+
+<div align="center">
 
 | Layer | Technology |
 |---|---|
-| Backend | Python, Flask |
-| PDF Parsing | pdfplumber |
-| Embeddings | sentence-transformers (all-MiniLM-L6-v2) |
-| ML | scikit-learn, PyTorch |
-| LLM Feedback | Groq API (Llama 3.3-70b-versatile) |
-| Frontend | HTML, Bootstrap 5, Vanilla JS |
-| Data | JSON (jobs, training pairs, metrics) |
+| 🖥️ Backend | Python · Flask |
+| 📄 PDF Parsing | pdfplumber |
+| 🧬 Embeddings | sentence-transformers (`all-MiniLM-L6-v2`) |
+| 🤖 ML | scikit-learn · PyTorch |
+| 💬 LLM Feedback | Groq API (`llama-3.3-70b-versatile`) |
+| 🎨 Frontend | HTML · Bootstrap 5 · Vanilla JS |
+| 📦 Data | JSON (jobs · training pairs · metrics) |
+
+</div>
 
 ---
 
-## Available Job Roles
+## 🎓 Academic Context
 
-HireSense includes 51 job descriptions across 8 roles and 3 seniority categories (A/B/C):
+This project was built as part of a CS undergraduate curriculum at **Mohammad Ali Jinnah University (MAJU), Karachi**. It demonstrates:
 
-- Machine Learning Engineer
-- Data Scientist
-- Backend Developer
-- Frontend Developer
-- Software Engineer
-- DevOps Engineer
-- QA Engineer
-- Product Manager
-
----
-
-## Academic Context
-
-This project was developed as part of a Computer Science undergraduate curriculum at **Mohammad Ali Jinnah University (MAJU), Karachi**. It demonstrates applied machine learning concepts including:
-
-- Sentence embedding models and fine-tuning with contrastive loss
+- Sentence embedding models and contrastive fine-tuning
 - PDF parsing and NLP preprocessing pipelines
-- Hybrid scoring systems (rule-based + semantic)
+- Hybrid scoring (rule-based + semantic similarity)
 - Flask REST API design and frontend integration
-- Model evaluation metrics (F1, Precision, Recall, MRR)
+- Model evaluation: F1, Precision, Recall, MRR
 
 ---
 
-## License
+## 📄 License
 
-This project is licensed under the MIT License.
+Distributed under the **MIT License**. See `LICENSE` for details.
 
 ---
 
-*Built by Natish — CS Undergraduate, MAJU Karachi*
+<div align="center">
+
+Built by **Natish Mourani**  
+CS Undergraduate · Mohammad Ali Jinnah University, Karachi
+
+[![GitHub](https://img.shields.io/badge/GitHub-natishmourani-181717?style=for-the-badge&logo=github)](https://github.com/natishmourani)
+
+<br/>
+
+*If your resume doesn't fit the job, HireSense will tell you why — and what to do about it.*
+
+</div>
